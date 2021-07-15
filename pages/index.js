@@ -51,7 +51,7 @@ export default function Home() {
     'lucasamsilva',
     'CarlosH-Gomes',
     'FilipFelipe',
-    'juliasilvamoura',
+    'WDelesposti',
     'iuri-ramon98'
   ]
 
