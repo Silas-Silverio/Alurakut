@@ -60,7 +60,7 @@ export default function Home(props) {
     const [seguidores, setSeguidores]= React.useState([]);
     React.useEffect(function(){
     // API Github
-      fetch('https://api.github.com/users/Silas-Silverio/followers')
+      fetch(`https://api.github.com/users/${githubUser}/followers`)
       .then(function (respostaDoServidor){
         return respostaDoServidor.json();
       })
@@ -207,6 +207,7 @@ export async function getServerSideProps(context) {
     }
   })
   .then((resposta) => resposta.json())
+
   
   if(!isAuthenticated){
     return {
@@ -216,7 +217,7 @@ export async function getServerSideProps(context) {
       }
     }
   }
-
+  
   const { githubUser } = jwt.decode(token);
 
   return {
